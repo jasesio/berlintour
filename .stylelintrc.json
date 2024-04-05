@@ -1,0 +1,42 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recess-order",
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "color-no-invalid-hex": true,
+    "font-family-no-duplicate-names": true,
+    "declaration-block-no-duplicate-properties": true,
+    "block-no-empty": true,
+    "block-opening-brace-newline-before": "always",
+    "block-closing-brace-newline-after": "always",
+    "unit-allowed-list": ["px", "em", "rem", "%", "vh"],
+    "indentation": 2,
+    "selector-class-pattern": null,
+    "order/order": [
+      [
+        "custom-properties",
+        "dollar-variables",
+        "declarations",
+        "rules"
+      ]
+    ],
+    "order/properties-order": [
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "z-index",
+      "width",
+      "background-color",
+      "display",
+      "grid-template-columns",
+      "justify-content",
+      "align-items",
+      "padding-left",
+      "padding-right"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+@use "sass:color";
+
+$font-family-sans-serif: "Segoe UI", "roboto",
+  "Helvetica Neue", "arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-serif: "Georgia", "Times New Roman", serif;
+
+$uoc-corporate: #000078;
+$uoc-masterbrand: #73edff;
+$corporate-light:#DAD7CD;
+$corporate-light-grey: #A3B18A;
+$corporate-light-green: #588157;
+$corporate-green: #3A5A40;
+$corporate-dark-green: #344E41;
+
+$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+
+$mqMinWidth: 420px;
+
+
+
+

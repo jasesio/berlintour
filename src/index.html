@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="stylesheet" type="text/css" href="./assets/styles/_variables.scss">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://kit.fontawesome.com/d45755a3b2.js" crossorigin="anonymous"></script>
+
+
+    <title>Imprescindibles Berlin</title>
+  </head>
+  <body>
+    <div class="container">
+      <include src="./views/header.html"></include>
+      
+      <div class="container__hero" id="hero"> 
+        <div class="container__hero__text">
+          <div class="bg-color">
+          <h1>Tour a pie por la Puerta de Hamburgo</h1>
+        
+      
+        <div class="container__hero__form"><p>Esta ruta a pie de 3 horas y media es la más completa de la ciudad. ¡Reserva ya!</p> <form action="/reservar" method="post" class="reservation-form">
+          <div class="form__field">
+            <label for="fecha" class="form__label"> <i class="fa-solid fa-calendar-alt"></i> Fecha:</label>
+            <input type="date" id="fecha" name="fecha" class="form__input" required>
+          </div>
+          
+          <div class="form__field">
+            <label for="num_personas" class="form__label"> <i class="fa-solid fa-user"></i> Número de Personas:</label>
+            <input type="number" id="num_personas" name="num_personas" class="form__input" min="1" required>
+          </div>
+          
+          <div class="form__field">
+            <label for="hora" class="form__label"> <i class="fa-solid fa-clock"></i>Hora:</label>
+            <select id="hora" name="hora" class="form__select" required>
+              <option value="09:30">09:30</option>
+              <option value="10:30">10:30</option>
+              <option value="11:30">11:30</option>
+              <option value="11:30">12:30</option>
+              <option value="11:30">13:30</option>
+              <option value="11:30">14:30</option>
+             
+            </select>
+          </div>
+          
+          <button type="submit" class="form__button">Reservar <i class="fa-solid fa-chevron-right"></i></button>
+        </form> </div>
+      
+      
+      </div>
+       
+ </div>
+    
+    
+    
+    
+    
+    </div>
+
+      <div class="row row__odd">
+        <figure class="row__image">
+          <img  class="row__image__img" src="./assets/images/judios_asesinados_monumento.png" alt="judios asesionados monumento">
+          <figcaption class="row__image-caption">© Johannes Plenio en Pexels</figcaption>
+        </figure>
+        <div class="row__content">
+          <h2 class="row__title">Monumento a los judíos de Europa asesinados</h2>
+          <p class="row__text">Este monumento dedicado a los seis millones de judíos que murieron víctimas del Holocausto recuerda las atrocidades del nazismo.</p>
+          <button type="submit" class="row__button">Leer más <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="row row__even">
+        <div class="row__content">
+          <h2 class="row__title">Posdam</h2>
+          <p>Este monumento dedicado a los seis millones de judíos que murieron víctimas del Holocausto recuerda las atrocidades del nazismo.</p>
+          <button type="submit"  class="row__button">Leer más <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+        <figure class="row__image">
+          <img class="row__image__img" src="./assets/images/Posdam.jpg" alt="judios asesionados monumento">
+          <figcaption class="row__image-caption">©Pexels</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="row row__odd">
+      <figure class="row__image">
+        <img  class="row__image__img" src="./assets/images/piruli_tv_antena.jpg" alt="Berliner Fernsehturm">
+        <figcaption class="row__image-caption">© Johannes Plenio en Pexels</figcaption>
+      </figure>
+      <div class="row__content">
+        <h2 class="row__title">La Torre de televisión de Berlín (Berliner Fernsehturm)</h2>
+        <p class="row__text">Con sus 368 metros, es el edificio de acceso público más alto de Europa. Esta torre se divisa desde prácticamente cualquier punto de la enorme ciudad de Berlín.</p>
+        <button type="submit" class="row__button">Leer más <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <div class="row row__even">
+      <div class="row__content"> 
+    <h2 class="row__title">Punto de encuentro</h2>
+  <p> Brandenburger Tor
+    Pariser Platz
+    10117 Berlin
+    Alemania
+
+
+  </p></div>
+      <div id="map"></div> <!-- Contenedor para el mapa --></div>
+  
+    </div>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

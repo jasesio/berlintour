@@ -1,0 +1,173 @@
+
+
+/**
+ * componentes específicos, encabezado, botones
+ */
+
+ .header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+  .header__logo{
+  max-width: 200px;
+  
+  @media (min-width: $mqMinWidth) {
+    max-width: 150px;
+  }
+    
+    }
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+
+  @include border-radius(10px);
+}
+
+  .header__nav {
+    background-color: #fff;
+    padding: 0;
+  
+    ul {
+      list-style: none;
+  
+      li {
+        display: inline-block;
+        margin-right: 10px;
+  
+        a {
+          text-decoration: none;
+          color: $corporate-green;
+  
+          &:hover {
+            color: $corporate-light-grey;
+          }
+        }
+      }
+    }
+  }
+  
+.row__button {
+background-color: $corporate-dark-green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $corporate-light-grey;
+  }
+
+}
+  
+.form {
+  width: 50%;
+  color: #fff;
+
+  &__label {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &__input {
+    border: 1px solid #555;
+    width: 100%;
+    padding: 3px;
+  }
+
+  &__button {
+    text-align: left;
+    width: 100%;
+    background-color: $corporate-light-green;
+    color: $uoc-bg;
+    padding: 15px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1rem;
+   
+
+    &:hover {
+      background-color: $corporate-light-grey;
+    }
+  }
+
+  @media (max-width: $mqMinWidth) {
+    width: 100%;
+  }
+}
+
+
+
+  .footer {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 20px;
+    background: $corporate-dark-green;
+  
+    &__social-media {
+      width: 40%;
+    }
+  
+    @media (max-width: $mqMinWidth) {
+      flex-direction: column;
+      
+      &__social-media {
+        width: 100%;
+        align-items: left;
+      }
+    }
+  }
+  
+
+  .legal__link {
+    color: #fff;
+  }
+
+  .fa-brands {
+    color: #fff;
+  }
+
+  .social,
+  .legal {
+    list-style: none;
+  
+    &__link {
+      color: #fff;
+    }
+
+    @media (max-width: $mqMinWidth){
+    padding-left: 0;
+
+    }
+
+
+    
+  }
+
+  .form__terms input[type="checkbox"],
+.form__terms label {
+  display: inline-block;
+  vertical-align: middle; /* Alinear verticalmente los elementos */
+}

@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $uoc-bg;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: $uoc-corporate;
+}
+
+.container__hero {
+  background-image: url('../images/hero_image.png');
+  background-size: cover;
+  height: 500px;
+  padding-top: 41px;
+  background-position: center;
+
+  @media (width <= 768px) {
+  height: 600px;
+
+  }
+}
+
+.container__hero__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Alineación vertical */
+  padding: 4% 14% 0; /* Ajusta los rellenos según sea necesario */
+  color:#fff;
+
+  @media (width <= 768px) {
+    padding: 11% 2% 0;
+
+  }
+}
+
+.bg-color {
+  background-color: #344E41CC;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  gap: 3rem;
+  
+
+  @media (width <= 768px) {
+    flex-direction: column; /* Cambia la dirección de flexión a columna en dispositivos móviles */
+    padding: 11% 2% 0;
+    gap: 1rem;
+
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 20px;
+
+  &.row__odd {
+    background-color: #fff;
+  }
+
+  &.row__even {
+    background-color: $corporate-light-grey;
+  }
+
+  &__content {
+    color: $corporate-dark-green;
+    width: 70%;
+  }
+
+  &__image {
+    width: 30%;
+    margin: 0;
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  @media (width <= 768px) {
+    flex-direction: column; /* Cambia la dirección de flexión a columna en dispositivos móviles */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+
+    &.row__odd {
+      background-color: #fff;
+      flex-direction: column-reverse; /* Cambia la dirección de flexión a columna-inversa para las filas impares en dispositivos móviles */
+    }
+
+    &.row__even {
+      background-color: $corporate-light-grey;
+    }
+
+    &__image,
+    &__content {
+      width: 100%; /* Ajusta el ancho de los elementos al 100% */
+    }
+  }
+}
+
+
+#map { /* Estilo básico para el contenedor del mapa */
+  height: 400px;
+  width: 100%;
+}
